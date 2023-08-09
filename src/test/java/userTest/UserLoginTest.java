@@ -21,7 +21,7 @@ public class UserLoginTest {
     public void setUp() {
         userApi = new UserApi();
         // Регистрация нового пользователя для тестов
-        testUser = new User("test_login_user7463@ya.ru", "test_password", "Test User");
+        testUser = User.getRandomUser();
         userApi.createUser(testUser);
     }
 
