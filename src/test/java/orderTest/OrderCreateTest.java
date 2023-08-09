@@ -27,7 +27,7 @@ public class OrderCreateTest {
     public void setUp() {
         userApi = new UserApi();
         orderApi = new OrderApi();
-        testUser = new User("test_user123@ya.ru", "test_password", "Test User");
+        testUser = User.getRandomUser();
         userApi.createUser(testUser);
         ValidatableResponse loginResponse = userApi.loginUser(UserData.from(testUser), "");
         accessToken = loginResponse.extract().path("accessToken");

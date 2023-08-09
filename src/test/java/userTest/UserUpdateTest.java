@@ -20,7 +20,7 @@ public class UserUpdateTest {
     @Before
     public void setUp() {
         userApi = new UserApi();
-        testUser = new User("test_upd_user74654@ya.ru", "test_password", "Test User");
+        testUser = User.getRandomUser();
         userApi.createUser(testUser);
 
         // Логин для получения accessToken
